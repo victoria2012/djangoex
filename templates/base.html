@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}">
+    <!-- Highcharts JavaScript : html5-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+        <!-- Highcharts JavaScript : AJAX -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+     <!-- Highcharts JavaScript : CSS3.0 -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+         <!-- Highcharts JavaScript : JavaScript -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+     <!-- Highcharts JavaScript : JQuery -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- 웹폰트 선언도 가능-->
+
+</head>
+<body>
+    <header>
+            <form>
+        <table>
+            <tr>
+                <ul id="login">
+                  <li><a href="{% url 'register' %}">REGISTER</a></li>
+                  <li><a href="{% url 'login' %}">LOGIN</a></li>
+            </tr>
+        </table>
+    </form>
+        <h1>HTML5, CSS3.0</h1>
+    </header>
+
+    <ul id="menu">
+      <li><a href="{% url 'html5' %}">HTML5</a></li>
+      <li><a href="{% url 'css3' %}">CSS3.0</a></li>
+      <li><a href="{% url 'javascript' %}">JavaScript</a></li>
+      <li><a href="{% url 'jquery' %}">jQuery</a></li>
+      <li><a href="{% url 'ajax' %}">AJAX</a></li>
+    </ul>
+    {% if section != None %}
+        {% include section %}
+    {% else %}
+        <section></section>
+    {% endif %}
+  <footer></footer>
+
+</body>
+</html>
